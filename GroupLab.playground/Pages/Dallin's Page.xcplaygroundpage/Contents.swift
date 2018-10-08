@@ -8,35 +8,50 @@ print("\(optionals) is ?: a value either contains a value or contains nil to ind
 
 // Example of Optional Chainning
 
-
 class Car {
-    var make: String = ""
+    var make: String
     var model: Model?
+    
+    
+    init(make: String, model: Model?) {
+        self.make = make
+        self.model = model
+    }
 }
 
 class Model {
-    var modelType: String = ""
+    var modelType: String
     var year: Year?
+    
+    init(modelType: String, year: Year?) {
+        self.modelType = modelType
+        self.year = year
+    }
 }
 
 class Year {
-    var mileage: Int = 0
-    var costOfCar: Int?
+    var mileage: Int
+    var costOfCar: String?
+    var manufacturedYear: Int
+    
+    init(mileage: Int, costOfCar: String?, manufacturedYear: Int) {
+        self.mileage = mileage
+        self.costOfCar = costOfCar
+        self.manufacturedYear = manufacturedYear
+    }
 }
 
-let typeCar = Car()
-typeCar.make = "Toyota"
-typeCar.model?.modelType = "4Runner"
+let typeYear = Year(mileage: 37, costOfCar: "399201", manufacturedYear: 2019)
 
-let typeModel = Model()
-typeModel.year?.mileage = 2019
+let typeModel = Model(modelType: "4Runner", year: typeYear)
 
-let typeYear = Year()
-typeYear.mileage = 120
-typeYear.costOfCar = 20482
 
-if let bestCar = typeCar.model?.year {
-    print("Your imaginary car is \(bestCar)")
+let typeCar = Car(make: "Toyota", model: typeModel)
+
+
+
+if let bestCar = typeCar.model {
+    print("Your imaginary car is Make: \(bestCar.modelType), Model: \(typeCar.make), Year: \(typeYear.manufacturedYear), Mileage: \(typeYear.mileage). It will cost \(typeYear.costOfCar) dollars to get the car.")
 } else {
     print("Do you even want a car?")
 }
