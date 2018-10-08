@@ -1,7 +1,6 @@
-//: [Previous](@previous)
 
 import Foundation
 
 var str = "Hello, playground"
 
-//: [Next](@next)
+//This is my page so go away.
