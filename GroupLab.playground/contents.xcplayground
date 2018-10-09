@@ -1,8 +1,2 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<playground version='6.0' target-platform='ios' executeOnSourceChanges='false'>
-    <pages>
-        <page name='Gabe&apos;s Page'/>
-        <page name='Doug&apos;s Page'/>
-        <page name='Dallin&apos;s Page'/>
-    </pages>
-</playground>
+<playground version='6.0' target-platform='ios' executeOnSourceChanges='false'/>
