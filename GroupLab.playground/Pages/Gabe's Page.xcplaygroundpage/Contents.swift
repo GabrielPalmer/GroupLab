@@ -1,6 +1,7 @@
 
 import Foundation
 
+
 /*
  In the countTo function, why doesn't i in the final print statement work? Comment your answer beneath the line of code. What could replace i so that it would always have the desired value? Rewrite the print statement in a way that works every time.
  */
@@ -18,7 +19,7 @@ func countTo(num: Int) {
 
 /*
  Type shadowing is when variables with the same name exist in the same scope. But the compiler will always use the values from the nearest scope.
- In the Cake class initializer, what keyword could be used, and where, to distinguish between the class properties and the initializer parameters?
+ In the Cake class initializer, add a keyword that could be used to distinguish between the class properties and the initializer parameters.
  */
 
 class Cake {
@@ -42,6 +43,20 @@ class Cake {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+//enum example
 
 enum FarmAnimals: String {
     case chicken = "chicken"
@@ -69,20 +84,7 @@ func animalNoise(animal: FarmAnimals) {
     }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+///////////////////////////////////////////////////////////// ANSWER KEY /////////////////////////////////////////////////////////////////////////
 
 /*
 
