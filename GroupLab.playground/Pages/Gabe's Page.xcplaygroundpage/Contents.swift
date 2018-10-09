@@ -17,12 +17,12 @@ func countTo(num: Int) {
 
 
 /*
- 
+ Type shadowing is when variables with the same name exist in the same scope. In the Cake class initializer, what keyword could be used, and where, to distinguish between the class properties and the initializer parameters?
  */
 class Cake {
-    var flavor: String
-    var frosting: String
-    var tiers: Int
+    let flavor: String
+    let frosting: String
+    let tiers: Int
     
     init(flavor: String, frosting: String, tiers: Int) {
         flavor = flavor
@@ -30,3 +30,4 @@ class Cake {
         tiers = tiers
     }
 }
+
