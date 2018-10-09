@@ -17,8 +17,10 @@ func countTo(num: Int) {
 
 
 /*
- Type shadowing is when variables with the same name exist in the same scope. In the Cake class initializer, what keyword could be used, and where, to distinguish between the class properties and the initializer parameters?
+ Type shadowing is when variables with the same name exist in the same scope. But the compiler will always use the values from the nearest scope.
+ In the Cake class initializer, what keyword could be used, and where, to distinguish between the class properties and the initializer parameters?
  */
+
 class Cake {
     let flavor: String
     let frosting: String
@@ -31,3 +33,81 @@ class Cake {
     }
 }
 
+
+
+
+
+
+
+
+
+
+
+enum FarmAnimals: String {
+    case chicken = "chicken"
+    case horse = "horse"
+    case cow = "cow"
+    case sheep = "sheep"
+    case dog = "dog"
+    case pig = "pig"
+}
+
+func animalNoise(animal: FarmAnimals) {
+    switch animal {
+    case .chicken:
+        print("Cluck Cluck")
+    case .horse:
+        print("Neeeiiigh")
+    case .cow:
+        print("Moooo")
+    case .sheep:
+        print("Baaa")
+    case .dog:
+        print("Bark Bark")
+    case .pig:
+        print("Oink!")
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+
+func countTo(num: Int) {
+    
+    for i in 1...num {
+        print(i)
+    }
+    
+    print("The final number was \(num)")
+}
+
+
+
+
+class Cake {
+    let flavor: String
+    let frosting: String
+    let tiers: Int
+    
+    init(flavor: String, frosting: String, tiers: Int) {
+        self.flavor = flavor
+        self.frosting = frosting
+        self.tiers = tiers
+    }
+}
+
+ */
