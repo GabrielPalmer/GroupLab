@@ -26,30 +26,24 @@ class Apartment: House {
     var hasGarage: Bool = false
     
     init(windows:Int, hasGarage:Bool) {
-        self.hasGarage = hasGarage
+      
         
-        super.init(windows: windows)
     }
 }
 
 // Create a class CardboardBox that is a a subclass of House. Give CardboardBox a Bool property called hasDoor and set it to false. Then initialize it.
 
-class CardboardBox: House {
-    var hasDoor: Bool = false
-    
-    init(windows:Int, hasDoor:Bool) {
-        self.hasDoor = hasDoor
-        
-        super.init(windows: 0)
-    }
+class CarboardBox
+
+
     
  // Based on this superclass and its two subclasses, create an instance of Apartment that has 8 windows and a garage.
     
-    let apartment:House = Apartment(windows: 8, hasGarage: true)
+   
     
     
     
-}
+
 
 /*
  SCOPE
