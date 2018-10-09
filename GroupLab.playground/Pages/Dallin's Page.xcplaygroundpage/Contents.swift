@@ -3,13 +3,13 @@
 
 import UIKit
 
-// OPTIONALS
+// OPTIONALS : Read each questions and print or // comment below.
 
 // What does the "?" mean and do?
 
 // Whats the code to force unwrap?
 
-// where in the code do you unwrap?
+// where in the code do you unwrap? and whats the name of the code?
 
 let optionals = "3.1 Optionals"
 
@@ -67,7 +67,7 @@ if let bestCar = typeCar.model {
 
 ///////////////////////////////////////////////////////////////////////////////////////
 
-// GUARD
+// GUARD: Read each questions and print or // comment below.
 
 // Why cant I use my if and else statement instead of guard?
 
