@@ -1,5 +1,6 @@
 //: [Previous](@previous)
 
+
 import UIKit
 
 // OPTIONALS
@@ -70,14 +71,16 @@ if let bestCar = typeCar.model {
 
 // Why cant I use my if and else statement instead of guard?
 
-// What does guard let do?
+// What does "guard let" do?
 
 // Why you need "return nil" instead of just "return"?
 
 
 let `guard` = "3.3 Guard"
 
-print("\(`guard`) is like an if and else statement but you use guard instead.")
+print("\(`guard`) statement is simple and powerful. It checks for some condition and if it evaluates to be false, then the else statement executes which normally will exit a method. A guard let statement is another way of writing an if let statement written in a different way. You use a guard statement to require that a condition must be true in order for the code after the guard statement to be executed. Unlike an if statement, a guard statement always has an else clause—the code inside the else clause is executed if the condition is not true.")
+
+// SITE; https://medium.com/@abhimuralidharan/if-let-if-var-guard-let-and-defer-statements-in-swift-4f87fe857eb6
 
 // Example of guard
 
@@ -102,11 +105,32 @@ addressTextField.text = "1827 Provo Dr. Provo UT 39281"
 yearYouWereBornTextField.text = "1923"
 
 
-func creatPerson() -> Person? {
+func createPerson() -> Person? {
     guard let unwrapFirstName = firstNameTextField.text, let unwrapLastName = lastNameTextField.text, let unwrapAge = ageTextField.text, let unwrapAddress = addressTextField.text, let unwrapYearYouWereBorn = yearYouWereBornTextField.text else {return nil}
     
     return Person(firstName: unwrapFirstName, lastName: unwrapLastName, age: unwrapAge, address: unwrapAddress, yearYouWereBorn: unwrapYearYouWereBorn)
 }
 
+createPerson()
+
+// Another Example
+
+func greet(person: [String: String]) {
+    guard let name = person["name"] else {
+        return
+    }
+    print("Hello \(name)!")
+    guard let location = person["location"] else {
+        print("I hope the weather is nice near you.")
+        return
+    }
+    print("I hope the weather is nice in \(location).")
+}
+greet(person: ["name": "John"])
+// Prints "Hello John!"
+// Prints "I hope the weather is nice near you."
+greet(person: ["name": "Jane", "location": "Cupertino"])
+// Prints "Hello Jane!"
+// Prints "I hope the weather is nice in Cupertino."
 
 
